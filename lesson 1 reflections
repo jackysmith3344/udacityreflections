@@ -1,0 +1,35 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+In the small file that you can see in one screen of an editor, diff would be a waste of time.  But once you get files that are too big for that, it's a no-brainer to use diff, that kind of detailed work is what pcs are good at.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+If something goes horribly wrong you can step back to a version that worked
+If someone else messes up your file you can find out who it was & go back to your preferred version
+You can see your mistakes so you can learn from them
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+If you get really absorbed in what you're doing, you might forget to commit.  And then you might find that you'd gone off in a wrong direction half way through, and it would be great if you could start again from half way through - much easier if you'd thought about it.
+Auto saves can be a real life saver when the system crashes, though...
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+GIT is designed for code management while googledocs is designed for documents.  It's much less common for docs to need to link changes between files.
+
+How can you use the commands git log and git diff to view the history of files?
+
+git log lets you identify the versions you want to compare and git diff identifies the exact differences.  It's a bit clunky - you need to be pretty mean at copying & pasting, and you'd need the actual code open to see the context of the changes...
+
+How might using version control make you more confident to make changes that
+could break something?
+
+Because I can always go back & see what I did I can be more confident of finding errors quickly & without causing unexpected additional errors by thrashing around in the dark.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+The open food network ruby system
