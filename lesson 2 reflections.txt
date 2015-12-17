@@ -6,4 +6,8 @@ How is the staging area different from the working directory and the repository?
 
 The staging area gives you a chance to try out how things look before you commit anything.
 
-
+NOTES  "git diff" - compares the files in the working area & the files in the staging area
+       "git diff --staged" compares the files in the working area with the commit that's currently in use
+It's a good idea to use these routinely BEFORE creating a commit.
+   	   "git reset --hard" drops all the changes to files in the working area, permanently - no way to get them back.
+       ONLY use this when you've used git diff & git diff --staged to make sure you're getting rid of something you really want to get rid of.
