@@ -25,8 +25,7 @@ How can you use the commands git log and git diff to view the history of files?
 
 git log lets you identify the versions you want to compare and git diff identifies the exact differences.  It's a bit clunky - you need to be pretty mean at copying & pasting, and you'd need the actual code open to see the context of the changes...
 
-How might using version control make you more confident to make changes that
-could break something?
+How might using version control make you more confident to make changes that could break something?
 
 Because I can always go back & see what I did I can be more confident of finding errors quickly & without causing unexpected additional errors by thrashing around in the dark.
 
