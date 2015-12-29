@@ -2,3 +2,7 @@ When would you want to use a remote repository rather than keeping all your work
 For security - its useful to have a cloud backup
 If there are several people working on a project
 If you want to ask other people's advice
+
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+You might not want to include everyones input into your version yet
+If you're experimenting and you might want to step back to a previous version (although there are other ways to do this)
