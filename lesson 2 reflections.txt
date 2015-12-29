@@ -4,10 +4,58 @@ You create a .git directory with a standard set of subdirs to hold the metadata 
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
-The staging area gives you a chance to try out how things look before you commit anything.
+The staging area gives you a chance to try out how things look before you commit anything.  You can check that you've got exactly the changes you want in this commit using git diff &tc.
 
 NOTES  "git diff" - compares the files in the working area & the files in the staging area
        "git diff --staged" compares the files in the working area with the commit that's currently in use
 It's a good idea to use these routinely BEFORE creating a commit.
    	   "git reset --hard" drops all the changes to files in the working area, permanently - no way to get them back.
        ONLY use this when you've used git diff & git diff --staged to make sure you're getting rid of something you really want to get rid of.
+
+How can you use the staging area to make sure you have one commit per logical change?
+You need to think strategically about what you've actually changed in the files you're looking at and make a judgement about what should be included as "one logical change".  Not always simple so the staging area gives you time to think about it.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+Where you need 2 or more versions... eg
+where 2 or more people are working on the same code
+where you have several ideas of what to do next or how to do something and you want to test each of them in turn
+
+How do the diagrams help you visualize the branch structure?
+They're not great but they do provide a sort of aid memoire.  It would take a bit of practice to get used to them.
+
+NOTES
+git branch     shows available branches in this project
+git branch [branchname] creates a new branch called [branchname]
+git checkout [branchname] switches to the new branch
+
+IF you checkout a commit by name instead of using a branch, you create a potentially unreachable head even if you commit it (unless you note down the name of the commit).  If you do this and THEN decide you want to turn this into a branch, you can (even later) use
+git checkout -b [branchname] - this turns your current version into a branch.
+
+There's a different version of git log to diagram branches (and the --oneline switch is quite dandy too)
+
+git log --graph --oneline [branchname1] [branchname2]... 
+
+
+MERGING BRANCHES
+
+git branch - to make sure you're in the right place before you start (probably the master)
+
+merge branch '[branch name to merge]' - merges the branches & creates a new commit then run 
+
+git log - to see what happened.  Run to program to test...
+
+git branch -d [branch name]  - deletes the branch LABEL you dont need any more.  The commits stay of course.
+
+NEW COMMAND: git show [one commit only] - gives the changes made for just this commit (ie between this commit and its parent - which might not be the one shown last in the log because after a merge you get the commits in timestamp order).
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+Merging 2 branches means you have one version of the code including all the changes you want instead of having to choose between them.  
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+The auto merge saves a lot of hassle but is quite conservative so it shouldnt make too many mistakes.
+
+
+
+
+
+
