@@ -25,6 +25,11 @@ FAST FORWARD merges: if the thing you're merging is an ancester of the thing you
 What is the benefit of having a copy of the last known state of the remote stored locally?
 That's your reference copy.
 
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+You could set up an FTP system to hold the current version but sorting out who'd changed what would be a nightmare.
+You could do all your changes on line and insist that everyone comments on stuff (yeah right!) and set up a set of agreed terms that people could search for to make searching easier.  But who'd remember to stick to the rules?
+On the other hand there's a lot of faff in GIT.  It might be easier to just do stuff.
+
 
 
 
